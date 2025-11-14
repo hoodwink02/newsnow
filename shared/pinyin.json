@@ -43,5 +43,10 @@
   "chongbuluo-latest": "chongbuluo-zuixin",
   "chongbuluo-hot": "chongbuluo-zuire",
   "douban": "douban-remendianying",
-  "steam": "Steam-zaixianrenshu"
+  "steam": "Steam-zaixianrenshu",
+  "google-trending": "Google-Trending",
+  "reddit-trending": "Reddit-Trending",
+  "x-trending": "X-Trending",
+  "tiktok-trending": "TikTok-Trending",
+  "instagram-trending": "Instagram-Trending"
 }

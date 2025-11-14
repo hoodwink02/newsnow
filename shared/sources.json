@@ -490,5 +490,100 @@
     "home": "https://store.steampowered.com",
     "color": "blue",
     "interval": 600000
+  },
+  "google": {
+    "redirect": "google-trending",
+    "name": "Google",
+    "type": "hottest",
+    "column": "world",
+    "home": "https://trends.google.com/",
+    "color": "blue",
+    "interval": 600000,
+    "title": "Trending"
+  },
+  "google-trending": {
+    "name": "Google",
+    "type": "hottest",
+    "column": "world",
+    "home": "https://trends.google.com/",
+    "color": "blue",
+    "interval": 600000,
+    "title": "Trending"
+  },
+  "reddit": {
+    "redirect": "reddit-trending",
+    "name": "Reddit",
+    "type": "hottest",
+    "column": "world",
+    "home": "https://www.reddit.com/",
+    "color": "orange",
+    "interval": 600000,
+    "title": "Trending"
+  },
+  "reddit-trending": {
+    "name": "Reddit",
+    "type": "hottest",
+    "column": "world",
+    "home": "https://www.reddit.com/",
+    "color": "orange",
+    "interval": 600000,
+    "title": "Trending"
+  },
+  "x": {
+    "redirect": "x-trending",
+    "name": "X",
+    "type": "hottest",
+    "column": "world",
+    "home": "https://twitter.com/",
+    "color": "gray",
+    "interval": 600000,
+    "title": "Trending"
+  },
+  "x-trending": {
+    "name": "X",
+    "type": "hottest",
+    "column": "world",
+    "home": "https://twitter.com/",
+    "color": "gray",
+    "interval": 600000,
+    "title": "Trending"
+  },
+  "tiktok": {
+    "redirect": "tiktok-trending",
+    "name": "TikTok",
+    "type": "hottest",
+    "column": "world",
+    "home": "https://www.tiktok.com/",
+    "color": "gray",
+    "interval": 600000,
+    "title": "Trending"
+  },
+  "tiktok-trending": {
+    "name": "TikTok",
+    "type": "hottest",
+    "column": "world",
+    "home": "https://www.tiktok.com/",
+    "color": "gray",
+    "interval": 600000,
+    "title": "Trending"
+  },
+  "instagram": {
+    "redirect": "instagram-trending",
+    "name": "Instagram",
+    "type": "hottest",
+    "column": "world",
+    "home": "https://www.instagram.com/",
+    "color": "pink",
+    "interval": 600000,
+    "title": "Trending"
+  },
+  "instagram-trending": {
+    "name": "Instagram",
+    "type": "hottest",
+    "column": "world",
+    "home": "https://www.instagram.com/",
+    "color": "pink",
+    "interval": 600000,
+    "title": "Trending"
   }
 }

@@ -40,6 +40,6 @@ export default defineConfig({
     unocss(),
     react(),
     pwa(),
-    nitro(),
+    // nitro(),
   ],
 })

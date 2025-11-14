@@ -66,5 +66,5 @@ if (process.env.VERCEL) {
 }
 
 export default function () {
-  return viteNitro(nitroOption)
+  // return viteNitro(nitroOption)
 }

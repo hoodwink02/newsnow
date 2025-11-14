@@ -429,6 +429,66 @@ export const originSources = {
     type: "hottest",
     home: "https://store.steampowered.com",
   },
+  "google": {
+    name: "Google",
+    color: "blue",
+    home: "https://trends.google.com/",
+    column: "world",
+    sub: {
+      "trending": {
+        title: "Trending",
+        type: "hottest",
+      },
+    },
+  },
+  "reddit": {
+    name: "Reddit",
+    color: "orange",
+    home: "https://www.reddit.com/",
+    column: "world",
+    sub: {
+      "trending": {
+        title: "Trending",
+        type: "hottest",
+      },
+    },
+  },
+  "x": {
+    name: "X",
+    color: "gray",
+    home: "https://twitter.com/",
+    column: "world",
+    sub: {
+      "trending": {
+        title: "Trending",
+        type: "hottest",
+      },
+    },
+  },
+  "tiktok": {
+    name: "TikTok",
+    color: "gray",
+    home: "https://www.tiktok.com/",
+    column: "world",
+    sub: {
+      "trending": {
+        title: "Trending",
+        type: "hottest",
+      },
+    },
+  },
+  "instagram": {
+    name: "Instagram",
+    color: "pink",
+    home: "https://www.instagram.com/",
+    column: "world",
+    sub: {
+      "trending": {
+        title: "Trending",
+        type: "hottest",
+      },
+    },
+  },
 } as const satisfies Record<string, OriginSource>
 
 export function genSources() {

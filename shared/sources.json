@@ -490,5 +490,45 @@
     "home": "https://store.steampowered.com",
     "color": "blue",
     "interval": 600000
+  },
+  "google": {
+    "name": "Google",
+    "type": "hottest",
+    "column": "world",
+    "home": "https://trends.google.com",
+    "color": "blue",
+    "interval": 3600000
+  },
+  "x": {
+    "name": "X",
+    "type": "hottest",
+    "column": "world",
+    "home": "https://x.com",
+    "color": "gray",
+    "interval": 600000
+  },
+  "tiktok": {
+    "name": "TikTok",
+    "type": "hottest",
+    "column": "world",
+    "home": "https://www.tiktok.com",
+    "color": "black",
+    "interval": 600000
+  },
+  "instagram": {
+    "name": "Instagram",
+    "type": "hottest",
+    "column": "world",
+    "home": "https://www.instagram.com",
+    "color": "pink",
+    "interval": 600000
+  },
+  "reddit": {
+    "name": "Reddit",
+    "type": "hottest",
+    "column": "world",
+    "home": "https://www.reddit.com",
+    "color": "orange",
+    "interval": 600000
   }
 }

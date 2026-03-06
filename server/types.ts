@@ -15,6 +15,26 @@ export interface RSSItem {
   created?: string
 }
 
+export interface ParsedRSSItem extends RSSItem {
+  id?: string
+  author?: string
+  category?: string | string[]
+  content?: string
+  enclosures?: any[]
+  media?: Record<string, any>
+  content_encoded?: string
+  podcast_transcript?: string
+  itunes_summary?: string
+  itunes_author?: string
+  itunes_explicit?: string
+  itunes_duration?: string
+  itunes_season?: string
+  itunes_episode?: string
+  itunes_episodeType?: string
+  itunes_image?: string
+  [key: string]: any
+}
+
 export interface CacheInfo {
   id: SourceID
   items: NewsItem[]

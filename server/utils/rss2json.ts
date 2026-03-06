@@ -1,5 +1,5 @@
 import { XMLParser } from "fast-xml-parser"
-import type { RSSInfo } from "../types"
+import type { RSSInfo, RSSItem } from "../types"
 
 export async function rss2json(url: string): Promise<RSSInfo | undefined> {
   if (!/^https?:\/\/[^\s$.?#].\S*/i.test(url)) return
@@ -24,7 +24,7 @@ export async function rss2json(url: string): Promise<RSSInfo | undefined> {
     image: channel.image ? channel.image.url : channel["itunes:image"] ? channel["itunes:image"].href : "",
     category: channel.category || [],
     updatedTime: channel.lastBuildDate ?? channel.updated,
-    items: [],
+    items: [] as RSSItem[],
   }
 
   let items = channel.item || channel.entry || []
@@ -34,7 +34,7 @@ export async function rss2json(url: string): Promise<RSSInfo | undefined> {
     const val = items[i]
     const media = {}
 
-    const obj = {
+    const obj: Record<string, any> = {
       id: val.guid && val.guid.$text ? val.guid.$text : val.id,
       title: val.title && val.title.$text ? val.title.$text : val.title,
       description: val.summary && val.summary.$text ? val.summary.$text : val.description,
@@ -47,7 +47,7 @@ export async function rss2json(url: string): Promise<RSSInfo | undefined> {
     };
 
     ["content:encoded", "podcast:transcript", "itunes:summary", "itunes:author", "itunes:explicit", "itunes:duration", "itunes:season", "itunes:episode", "itunes:episodeType", "itunes:image"].forEach((s) => {
-      // @ts-expect-error TODO
+
       if (val[s]) obj[s.replace(":", "_")] = val[s]
     })
 
@@ -73,9 +73,8 @@ export async function rss2json(url: string): Promise<RSSInfo | undefined> {
 
     Object.assign(obj, { media })
 
-    // @ts-expect-error TODO
-    rss.items.push(obj)
+    rss.items.push(obj as RSSItem)
   }
 
-  return rss
+  return rss as RSSInfo
 }

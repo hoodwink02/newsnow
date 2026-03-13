@@ -27,7 +27,8 @@ export const columns = {
 } as const
 
 export const fixedColumnIds = ["focus", "hottest", "realtime"] as const satisfies Partial<ColumnID>[]
-export const hiddenColumns = Object.keys(columns).filter(id => !fixedColumnIds.includes(id as any)) as HiddenColumnID[]
+export const fixedColumnIdSet: Set<ColumnID> = new Set(fixedColumnIds)
+export const hiddenColumns = Object.keys(columns).filter(id => !fixedColumnIdSet.has(id as ColumnID)) as HiddenColumnID[]
 
 export const metadata: Metadata = typeSafeObjectFromEntries(typeSafeObjectEntries(columns).map(([k, v]) => {
   switch (k) {

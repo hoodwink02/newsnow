@@ -5,14 +5,22 @@ export interface RSSInfo {
   description: string
   link: string
   image: string
+  category?: string[]
   updatedTime: string
   items: RSSItem[]
 }
 export interface RSSItem {
+  id?: string
   title: string
   description: string
   link: string
+  author?: string
   created?: string
+  category?: string[]
+  content?: string
+  enclosures?: any[]
+  media?: any
+  [key: string]: any
 }
 
 export interface CacheInfo {

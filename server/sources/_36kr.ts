@@ -31,7 +31,7 @@ const quick = defineSource(async () => {
 })
 
 const zonghe = defineSource(async () => {
-  const baseURL = "https://36kr.com"
+  const baseURL = "https://www.36kr.com"
   const formatted = dayjs().subtract(1, "day").format("YYYY-MM-DD")
   const url = `${baseURL}/hot-list/zonghe/${formatted}/1`
 
@@ -64,7 +64,10 @@ const zonghe = defineSource(async () => {
     const author = $el.find(".kr-flow-bar-author").text().trim()
 
     // 热度
-    const hot = $el.find(".kr-flow-bar-hot span").text().trim()
+    let hot = $el.find(".kr-flow-bar-collect span").text().trim()
+    if (!hot) {
+      hot = $el.find(".kr-flow-bar-hot span").text().trim()
+    }
 
     if (href && title) {
       articles.push({

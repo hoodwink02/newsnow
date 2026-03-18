@@ -101,9 +101,9 @@ export const originSources = {
       quick: {
         title: "快讯",
       },
-      renqi: {
+      zonghe: {
         type: "hottest",
-        title: "人气榜",
+        title: "综合榜",
       },
     },
   },

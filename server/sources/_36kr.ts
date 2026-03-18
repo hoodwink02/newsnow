@@ -30,10 +30,10 @@ const quick = defineSource(async () => {
   return news
 })
 
-const renqi = defineSource(async () => {
+const zonghe = defineSource(async () => {
   const baseURL = "https://36kr.com"
-  const formatted = dayjs().format("YYYY-MM-DD")
-  const url = `${baseURL}/hot-list/renqi/${formatted}/1`
+  const formatted = dayjs().subtract(1, "day").format("YYYY-MM-DD")
+  const url = `${baseURL}/hot-list/zonghe/${formatted}/1`
 
   const response = await myFetch<any>(url, {
     headers: {
@@ -85,5 +85,5 @@ const renqi = defineSource(async () => {
 export default defineSource({
   "36kr": quick,
   "36kr-quick": quick,
-  "36kr-renqi": renqi,
+  "36kr-zonghe": zonghe,
 })

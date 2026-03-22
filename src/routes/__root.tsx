@@ -66,7 +66,7 @@ function RootComponent() {
       </GlobalOverlayScrollbar>
       <Toast />
       <SearchBar />
-      {import.meta.env.DEV && (
+      {process.env.NODE_ENV !== "production" && (
         <>
           <ReactQueryDevtools buttonPosition="bottom-left" />
           <TanStackRouterDevtools position="bottom-right" />
